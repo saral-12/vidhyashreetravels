@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Vidhyashree Travels</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="sub-page">
+    <!-- Static Background Image for consistent theme -->
+    <div class="bg-slides">
+        <div class="bg-slide active" style="background-image: url('assets/hero-bg.png');"></div>
+    </div>
+    <div class="bg-overlay"></div>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="logo">
+            <a href="index.html" id="header-logo">
+                <span class="logo-bold">VIDHYASHREE</span>
+                <span class="logo-light">TRAVELS</span>
+            </a>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="packages.html" class="nav-link">Packages</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu" id="btn-menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="page-main-content">
+        <div class="page-header-container">
+            <span class="page-subtitle"><span class="sub-line"></span> Get in Touch</span>
+            <h1 class="page-main-title">CONTACT OUR EXPERTS</h1>
+            <p class="page-description">Have questions about destinations, custom planning, or pricing? Write to us and we will reply within 24 hours.</p>
+        </div>
+
+        <!-- Contact Main Grid -->
+        <div class="contact-main-grid">
+            <!-- Left Info Panel -->
+            <div class="contact-info-panel glass-panel">
+                <h2>Our Office</h2>
+                <p>Feel free to visit our main branch or connect with us directly via phone or email.</p>
+                
+                <div class="contact-coords">
+                    <p><i class="fa-solid fa-location-dot"></i> 101, Travel Plaza, Main Market, Mumbai, India</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fa-solid fa-envelope"></i> contact@vidhyashreetravels.com</p>
+                </div>
+
+                <h2>Follow Us</h2>
+                <div class="social-links" style="margin-top: 0;">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Right Form Panel -->
+            <div class="contact-form-panel glass-panel">
+                <h2>Send an Inquiry</h2>
+                <form id="contact-page-form" class="inquiry-form" style="margin-top: 1.5rem;">
+                    <div class="form-group">
+                        <label for="contact-name">Full Name</label>
+                        <input type="text" id="contact-name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contact-email">Email Address</label>
+                            <input type="email" id="contact-email" required placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-phone">Phone Number</label>
+                            <input type="tel" id="contact-phone" required placeholder="+91 99999 99999">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Your Message</label>
+                        <textarea id="contact-message" rows="5" required placeholder="Tell us about the dream package you want to plan..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" id="btn-submit-contact">Submit Inquiry</button>
+                </form>
+                <div class="success-message" id="success-contact-page">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <h3>Inquiry Received!</h3>
+                    <p>We've logged your request. One of our destination planners will email or call you shortly.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script imports -->
+    <script src="script.js"></script>
+</body>
+</html>
