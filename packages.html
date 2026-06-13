@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Travel Packages | Vidhyashree Travels</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="sub-page">
+    <!-- Static Background Image for consistent theme -->
+    <div class="bg-slides">
+        <div class="bg-slide active" style="background-image: url('assets/hero-bg.png');"></div>
+    </div>
+    <div class="bg-overlay"></div>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="logo">
+            <a href="index.html" id="header-logo">
+                <span class="logo-bold">VIDHYASHREE</span>
+                <span class="logo-light">TRAVELS</span>
+            </a>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="packages.html" class="nav-link active">Packages</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu" id="btn-menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="page-main-content">
+        <div class="page-header-container">
+            <span class="page-subtitle"><span class="sub-line"></span> Curated Expeditions</span>
+            <h1 class="page-main-title">TRAVEL PACKAGES</h1>
+            <p class="page-description">Explore our hand-picked experiences designed for true adventurers. Select a package and begin your journey today.</p>
+        </div>
+
+        <!-- Filters Section -->
+        <div class="catalog-filters">
+            <button class="filter-btn active" data-filter="all">All Packages</button>
+            <button class="filter-btn" data-filter="forest">Forest</button>
+            <button class="filter-btn" data-filter="desert">Desert</button>
+            <button class="filter-btn" data-filter="mountain">Mountain</button>
+            <button class="filter-btn" data-filter="ocean">Ocean</button>
+        </div>
+
+        <!-- Packages Showcase Grid -->
+        <div class="packages-showcase-grid">
+            <!-- Package 1 -->
+            <div class="package-showcase-card glass-panel" data-category="forest">
+                <div class="pkg-img-wrapper" style="background-image: url('assets/hero-bg.png');"></div>
+                <div class="pkg-content">
+                    <span class="pkg-tag">Forest Trek</span>
+                    <h3>Cascading Falls Odyssey</h3>
+                    <p class="pkg-desc">7 Days trekking through hidden rainforest pathways, experiencing local eco-lodges, and bathing in majestic, pristine waterfalls.</p>
+                    <div class="pkg-footer">
+                        <span class="pkg-price">$1,499<small>/person</small></span>
+                        <button class="book-now-trigger" data-destination="Cascading Falls">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package 2 -->
+            <div class="package-showcase-card glass-panel" data-category="forest">
+                <div class="pkg-img-wrapper" style="background-image: url('assets/monkey.png');"></div>
+                <div class="pkg-content">
+                    <span class="pkg-tag">Wildlife</span>
+                    <h3>Wild Canopy & Jungle Safaris</h3>
+                    <p class="pkg-desc">5 Days of deep-canopy expeditions. Face exotic primates, track nocturnal forest animals, and learn jungle survival skills.</p>
+                    <div class="pkg-footer">
+                        <span class="pkg-price">$1,250<small>/person</small></span>
+                        <button class="book-now-trigger" data-destination="Wild Canopy">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package 3 -->
+            <div class="package-showcase-card glass-panel" data-category="desert">
+                <div class="pkg-img-wrapper" style="background-image: url('assets/desert.png');"></div>
+                <div class="pkg-content">
+                    <span class="pkg-tag">Desert Caravan</span>
+                    <h3>Sahara Sunset Wanderer</h3>
+                    <p class="pkg-desc">6 Days desert trek. Caravan across high golden sand dunes, experience traditional berber hospitality, and sleep under infinite stars.</p>
+                    <div class="pkg-footer">
+                        <span class="pkg-price">$1,899<small>/person</small></span>
+                        <button class="book-now-trigger" data-destination="Sahara Dunes">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package 4 -->
+            <div class="package-showcase-card glass-panel" data-category="mountain">
+                <div class="pkg-img-wrapper" style="background-image: url('assets/mountain.png');"></div>
+                <div class="pkg-content">
+                    <span class="pkg-tag">Alpine Summit</span>
+                    <h3>Everest Summit Trek</h3>
+                    <p class="pkg-desc">10 Days climbing challenge. Hike up to snowy ridges, conquer steep vertical passes, and witness the sunrise above giant peaks.</p>
+                    <div class="pkg-footer">
+                        <span class="pkg-price">$2,999<small>/person</small></span>
+                        <button class="book-now-trigger" data-destination="Everest Summit">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package 5 -->
+            <div class="package-showcase-card glass-panel" data-category="ocean">
+                <div class="pkg-img-wrapper" style="background-image: url('assets/surf.png');"></div>
+                <div class="pkg-content">
+                    <span class="pkg-tag">Surf & Ocean</span>
+                    <h3>Pacific Crest Surf Expedition</h3>
+                    <p class="pkg-desc">6 Days surfing camp. Professional training for surfing giant wave crests, scuba diving reefs, and beach campfire retreats.</p>
+                    <div class="pkg-footer">
+                        <span class="pkg-price">$1,650<small>/person</small></span>
+                        <button class="book-now-trigger" data-destination="Pacific Crest">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Booking Inquiry Modal -->
+    <div class="modal-overlay" id="booking-modal">
+        <div class="modal-box glass-panel">
+            <button class="modal-close" aria-label="Close form" id="btn-close-booking">&times;</button>
+            <div class="modal-header">
+                <h2>Plan Your Adventure</h2>
+                <p>Fill out the form below and our travel expert will contact you within 24 hours.</p>
+            </div>
+            <form id="booking-form" class="inquiry-form">
+                <div class="form-group">
+                    <label for="user-name">Full Name</label>
+                    <input type="text" id="user-name" required placeholder="John Doe">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="user-email">Email Address</label>
+                        <input type="email" id="user-email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="user-phone">Phone Number</label>
+                        <input type="tel" id="user-phone" required placeholder="+1 (555) 000-0000">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="trip-destination">Select Destination</label>
+                        <select id="trip-destination" required>
+                            <option value="Cascading Falls">Cascading Falls Odyssey</option>
+                            <option value="Wild Canopy">Wild Canopy & Jungle Safaris</option>
+                            <option value="Sahara Dunes">Sahara Sunset Wanderer</option>
+                            <option value="Everest Summit">Everest Summit Trek</option>
+                            <option value="Pacific Crest">Pacific Crest Surf Expedition</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="travel-date">Preferred Travel Date</label>
+                        <input type="date" id="travel-date" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="user-message">Special Requirements / Notes</label>
+                    <textarea id="user-message" rows="4" placeholder="Let us know what kind of experience you are looking for..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn" id="btn-submit-inquiry">Send Inquiry</button>
+            </form>
+            <div class="success-message" id="success-inquiry">
+                <i class="fa-solid fa-circle-check"></i>
+                <h3>Inquiry Submitted Successfully!</h3>
+                <p>Thank you for choosing Vidhyashree Travels. We've saved your inquiry and will reach out very soon!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script imports -->
+    <script src="script.js"></script>
+</body>
+</html>
