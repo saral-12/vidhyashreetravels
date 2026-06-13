@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Gallery | Vidhyashree Travels</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="sub-page">
+    <!-- Static Background Image for consistent theme -->
+    <div class="bg-slides">
+        <div class="bg-slide active" style="background-image: url('assets/hero-bg.png');"></div>
+    </div>
+    <div class="bg-overlay"></div>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="logo">
+            <a href="index.html" id="header-logo">
+                <img src="assets/logo.png" alt="Vidhyashree Travels Logo" class="logo-img">
+                <span class="logo-bold">VIDHYASHREE</span>
+                <span class="logo-light">TRAVELS</span>
+            </a>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="packages.html" class="nav-link">Packages</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+                <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu" id="btn-menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="page-main-content">
+        <div class="page-header-container">
+            <span class="page-subtitle"><span class="sub-line"></span> Memories & Highlights</span>
+            <h1 class="page-main-title">OUR TRAVEL GALLERY</h1>
+            <p class="page-description">Browse through memorable snapshots of our group tours, beautiful landscapes, hotels, and highlights captured by our happy clients.</p>
+        </div>
+
+        <!-- Filters Section -->
+        <div class="catalog-filters">
+            <button class="filter-btn active" data-filter="all">All Photos</button>
+            <button class="filter-btn" data-filter="group">Group Tours</button>
+            <button class="filter-btn" data-filter="destination">Destinations</button>
+            <button class="filter-btn" data-filter="hotel">Hotels</button>
+            <button class="filter-btn" data-filter="memory">Customer Memories</button>
+        </div>
+
+        <!-- Gallery Showcase Grid -->
+        <div class="packages-showcase-grid" id="gallery-grid">
+            <!-- Photo 1 -->
+            <div class="package-showcase-card glass-panel" data-category="destination">
+                <div class="pkg-img-wrapper" style="background-image: url('assets/mountain.png'); height: 260px;"></div>
+                <div class="pkg-content" style="padding: 1.5rem;">
+                    <span class="pkg-tag">Destinations</span>
+                    <h3 style="font-size: 1.25rem;">Majestic Himalayan Ridges</h3>
+                </div>
+            </div>
+
+            <!-- Photo 2 -->
+            <div class="package-showcase-card glass-panel" data-category="group">
+                <div class="pkg-img-wrapper" style="background-image: url('assets/hero-bg.png'); height: 260px;"></div>
+                <div class="pkg-content" style="padding: 1.5rem;">
+                    <span class="pkg-tag">Group Tours</span>
+                    <h3 style="font-size: 1.25rem;">Forest Trek Expedition Group</h3>
+                </div>
+            </div>
+
+            <!-- Photo 3 -->
+            <div class="package-showcase-card glass-panel" data-category="memory">
+                <div class="pkg-img-wrapper" style="background-image: url('assets/monkey.png'); height: 260px;"></div>
+                <div class="pkg-content" style="padding: 1.5rem;">
+                    <span class="pkg-tag">Customer Memories</span>
+                    <h3 style="font-size: 1.25rem;">Exotic Primate Encounters</h3>
+                </div>
+            </div>
+
+            <!-- Photo 4 -->
+            <div class="package-showcase-card glass-panel" data-category="destination">
+                <div class="pkg-img-wrapper" style="background-image: url('assets/desert.png'); height: 260px;"></div>
+                <div class="pkg-content" style="padding: 1.5rem;">
+                    <span class="pkg-tag">Destinations</span>
+                    <h3 style="font-size: 1.25rem;">Golden Dunes Sunset Caravan</h3>
+                </div>
+            </div>
+
+            <!-- Photo 5 -->
+            <div class="package-showcase-card glass-panel" data-category="hotel">
+                <div class="pkg-img-wrapper" style="background-image: url('assets/surf.png'); height: 260px;"></div>
+                <div class="pkg-content" style="padding: 1.5rem;">
+                    <span class="pkg-tag">Hotels</span>
+                    <h3 style="font-size: 1.25rem;">Premium Oceanic Eco-Resort</h3>
+                </div>
+            </div>
+
+            <!-- Photo 6 -->
+            <div class="package-showcase-card glass-panel" data-category="memory">
+                <div class="pkg-img-wrapper" style="background-image: url('assets/mountain.png'); height: 260px;"></div>
+                <div class="pkg-content" style="padding: 1.5rem;">
+                    <span class="pkg-tag">Customer Memories</span>
+                    <h3 style="font-size: 1.25rem;">Summit Sunrise Celebration</h3>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script imports -->
+    <script src="script.js"></script>
+</body>
+</html>
