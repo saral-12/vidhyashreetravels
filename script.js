@@ -155,53 +155,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // -------------------------------------------------------------
-    // Search Modal System
-    // -------------------------------------------------------------
-    const searchTrigger = document.getElementById('btn-search');
-    const searchModal = document.getElementById('search-modal');
-    const closeSearchBtn = document.getElementById('btn-close-search');
-    const searchInput = document.getElementById('search-input');
-    const submitSearchBtn = document.getElementById('btn-search-submit');
-
-    searchTrigger.addEventListener('click', () => {
-        searchModal.classList.add('active');
-        searchInput.focus();
-    });
-
-    closeSearchBtn.addEventListener('click', () => {
-        searchModal.classList.remove('active');
-    });
-
-    searchModal.addEventListener('click', (e) => {
-        if (e.target === searchModal) {
-            searchModal.classList.remove('active');
-        }
-    });
-
-    // Handle trending tags click
-    document.querySelectorAll('.trending-tags .tag').forEach(tag => {
-        tag.addEventListener('click', (e) => {
-            e.preventDefault();
-            searchInput.value = tag.textContent;
-            searchInput.focus();
-        });
-    });
-
-    submitSearchBtn.addEventListener('click', () => {
-        if (searchInput.value.trim() !== '') {
-            alert(`Searching for: ${searchInput.value}`);
-            searchModal.classList.remove('active');
-            searchInput.value = '';
-        }
-    });
-
-    searchInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter' && searchInput.value.trim() !== '') {
-            submitSearchBtn.click();
-        }
-    });
-
 
     // -------------------------------------------------------------
     // Booking / Inquiry Modal System
