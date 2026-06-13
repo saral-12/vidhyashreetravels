@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidhyashree Travels | Travel Far, Find Yourself</title>
+    <meta name="description" content="Embark on the journey of a lifetime with Vidhyashree Travels. Explore wild forests, vast deserts, snowy peaks, and pristine oceans.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Slide Container (For smooth dynamic background crossfades) -->
+    <div class="bg-slides">
+        <div class="bg-slide active" style="background-image: url('assets/hero-bg.png');"></div>
+        <div class="bg-slide" style="background-image: url('assets/monkey.png');"></div>
+        <div class="bg-slide" style="background-image: url('assets/desert.png');"></div>
+        <div class="bg-slide" style="background-image: url('assets/mountain.png');"></div>
+        <div class="bg-slide" style="background-image: url('assets/surf.png');"></div>
+    </div>
+    <div class="bg-overlay"></div>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="logo">
+            <a href="#" id="header-logo">
+                <span class="logo-bold">VIDHYASHREE</span>
+                <span class="logo-light">TRAVELS</span>
+            </a>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#" class="nav-link active" data-target="home">Home</a></li>
+                <li><a href="#packages" class="nav-link" data-target="packages">Packages</a></li>
+                <li><a href="#about" class="nav-link" data-target="about">About Us</a></li>
+                <li><a href="#destinations" class="nav-link" data-target="destinations">Destinations</a></li>
+                <li><a href="#contact" class="nav-link" data-target="contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button class="icon-btn search-trigger" aria-label="Search site" id="btn-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button class="icon-btn profile-trigger" aria-label="User profile" id="btn-profile">
+                <i class="fa-regular fa-user"></i>
+            </button>
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu" id="btn-menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Hero Section -->
+    <main class="hero-container">
+        <div class="hero-content">
+            <!-- Text Content Wrapper -->
+            <div class="text-slider">
+                <!-- Slide 1 Content -->
+                <div class="text-slide-item active" data-index="0">
+                    <span class="subtitle">
+                        <span class="sub-line"></span> Embark On The Journey Of A Lifetime
+                    </span>
+                    <h1 class="main-title">TRAVEL FAR,<br>FIND YOURSELF</h1>
+                    <p class="description">
+                        Embark on a thrilling adventure across diverse landscapes with us. Explore pristine beaches and lush rainforests while immersing yourself in local cultures. Join us for unique, unforgettable experiences you'll treasure forever!
+                    </p>
+                </div>
+                <!-- Slide 2 Content -->
+                <div class="text-slide-item" data-index="1">
+                    <span class="subtitle">
+                        <span class="sub-line"></span> Discover Earth's Wildest Canopy
+                    </span>
+                    <h1 class="main-title">UNAMED WILD,<br>DEEP FORESTS</h1>
+                    <p class="description">
+                        Venture deep into the raw rainforests where exotic wildlife reigns. Observe beautiful wildlife in their natural habitat, trek through hidden pathways, and hear the heartbeat of the jungle.
+                    </p>
+                </div>
+                <!-- Slide 3 Content -->
+                <div class="text-slide-item" data-index="2">
+                    <span class="subtitle">
+                        <span class="sub-line"></span> Traverse Golden Oceans of Sand
+                    </span>
+                    <h1 class="main-title">SAHARA DUNES,<br>ENDLESS SKY</h1>
+                    <p class="description">
+                        Experience the ultimate solitude and majesty of the golden desert dunes. Watch the sky ignite with fiery sunset hues as you caravan under an infinite canopy of stars.
+                    </p>
+                </div>
+                <!-- Slide 4 Content -->
+                <div class="text-slide-item" data-index="3">
+                    <span class="subtitle">
+                        <span class="sub-line"></span> Conquer Majestic Alpine Horizons
+                    </span>
+                    <h1 class="main-title">SNOWY PEAKS,<br>PURE SUMMITS</h1>
+                    <p class="description">
+                        Rise above the clouds and stand amidst ancient giant peaks of ice. Challenge your limits, breathe the crisp alpine air, and experience unmatched views that will redefine your perspective.
+                    </p>
+                </div>
+                <!-- Slide 5 Content -->
+                <div class="text-slide-item" data-index="4">
+                    <span class="subtitle">
+                        <span class="sub-line"></span> Ride the Mighty Ocean Waves
+                    </span>
+                    <h1 class="main-title">RAGING TIDES,<br>OCEAN SPLASH</h1>
+                    <p class="description">
+                        Chase the adrenaline rush on top of the world's most spectacular surf breaks. Dive into crystal clear waters, master the tides, and discover the true power of the sea.
+                    </p>
+                </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="cta-actions">
+                <button class="save-badge-btn" aria-label="Save adventure" id="btn-save-adventure">
+                    <i class="fa-solid fa-bookmark"></i>
+                </button>
+                <button class="primary-cta-btn" id="btn-start-adventure">
+                    <span>START YOUR ADVENTURE</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Carousel Cards Showcase -->
+        <div class="carousel-showcase">
+            <div class="cards-track">
+                <!-- Card 1 -->
+                <div class="carousel-card active" data-slide-index="0" id="card-cascade">
+                    <div class="card-bg" style="background-image: url('assets/hero-bg.png');"></div>
+                    <div class="card-info">
+                        <span class="card-num">01</span>
+                        <h3 class="card-title">Cascading Falls</h3>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="carousel-card" data-slide-index="1" id="card-canopy">
+                    <div class="card-bg" style="background-image: url('assets/monkey.png');"></div>
+                    <div class="card-info">
+                        <span class="card-num">02</span>
+                        <h3 class="card-title">Wild Canopy</h3>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="carousel-card" data-slide-index="2" id="card-dunes">
+                    <div class="card-bg" style="background-image: url('assets/desert.png');"></div>
+                    <div class="card-info">
+                        <span class="card-num">03</span>
+                        <h3 class="card-title">Sahara Dunes</h3>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="carousel-card" data-slide-index="3" id="card-summit">
+                    <div class="card-bg" style="background-image: url('assets/mountain.png');"></div>
+                    <div class="card-info">
+                        <span class="card-num">04</span>
+                        <h3 class="card-title">Everest Summit</h3>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="carousel-card" data-slide-index="4" id="card-surf">
+                    <div class="card-bg" style="background-image: url('assets/surf.png');"></div>
+                    <div class="card-info">
+                        <span class="card-num">05</span>
+                        <h3 class="card-title">Pacific Crest</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Navigation Panel -->
+            <div class="slider-panel">
+                <div class="arrow-buttons">
+                    <button class="slider-arrow prev" aria-label="Previous slide" id="btn-prev-slide">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-arrow next" aria-label="Next slide" id="btn-next-slide">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill" id="progress-fill"></div>
+                </div>
+                <div class="slide-indicator">
+                    <span class="current-indicator" id="current-slide-num">01</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Search Overlay Modal -->
+    <div class="modal-overlay" id="search-modal">
+        <div class="modal-box glass-panel">
+            <button class="modal-close" aria-label="Close search" id="btn-close-search">&times;</button>
+            <h2>Search Destinations</h2>
+            <div class="search-input-wrapper">
+                <input type="text" placeholder="Where do you want to go?" id="search-input" autofocus>
+                <button class="search-submit" id="btn-search-submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="trending-tags">
+                <span>Trending:</span>
+                <a href="#" class="tag">Forests</a>
+                <a href="#" class="tag">Desert</a>
+                <a href="#" class="tag">Mountains</a>
+                <a href="#" class="tag">Surfing</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Inquiry Modal -->
+    <div class="modal-overlay" id="booking-modal">
+        <div class="modal-box glass-panel">
+            <button class="modal-close" aria-label="Close form" id="btn-close-booking">&times;</button>
+            <div class="modal-header">
+                <h2>Plan Your Adventure</h2>
+                <p>Fill out the form below and our travel expert will contact you within 24 hours.</p>
+            </div>
+            <form id="booking-form" class="inquiry-form">
+                <div class="form-group">
+                    <label for="user-name">Full Name</label>
+                    <input type="text" id="user-name" required placeholder="John Doe">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="user-email">Email Address</label>
+                        <input type="email" id="user-email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="user-phone">Phone Number</label>
+                        <input type="tel" id="user-phone" required placeholder="+1 (555) 000-0000">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="trip-destination">Select Destination</label>
+                        <select id="trip-destination" required>
+                            <option value="Cascading Falls">Cascading Falls (Forest Trek)</option>
+                            <option value="Wild Canopy">Wild Canopy (Wildlife Safari)</option>
+                            <option value="Sahara Dunes">Sahara Dunes (Desert Caravan)</option>
+                            <option value="Everest Summit">Everest Summit (Alpine Challenge)</option>
+                            <option value="Pacific Crest">Pacific Crest (Surf & Sea)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="travel-date">Preferred Travel Date</label>
+                        <input type="date" id="travel-date" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="user-message">Special Requirements / Notes</label>
+                    <textarea id="user-message" rows="4" placeholder="Let us know what kind of experience you are looking for..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn" id="btn-submit-inquiry">Send Inquiry</button>
+            </form>
+            <div class="success-message" id="success-inquiry">
+                <i class="fa-solid fa-circle-check"></i>
+                <h3>Inquiry Submitted Successfully!</h3>
+                <p>Thank you for choosing Vidhyashree Travels. We've saved your inquiry and will reach out very soon!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section Panel -->
+    <div class="content-panel" id="about-panel">
+        <div class="panel-content glass-panel">
+            <button class="panel-close" id="btn-close-about">&times;</button>
+            <h2>About Vidhyashree Travels</h2>
+            <p>At Vidhyashree Travels, we believe travel is not just about visiting new places, but about transforming yourself. Founded with a passion for discovery, we design custom adventures that lead you off the beaten path and into the heart of the world's most breathtaking landscapes.</p>
+            <div class="panel-stats">
+                <div class="stat">
+                    <span class="stat-num">12+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">150+</span>
+                    <span class="stat-label">Destinations</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">10k+</span>
+                    <span class="stat-label">Happy Travelers</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Packages Section Panel -->
+    <div class="content-panel" id="packages-panel">
+        <div class="panel-content glass-panel">
+            <button class="panel-close" id="btn-close-packages">&times;</button>
+            <h2>Featured Packages</h2>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <h4>Jungle Odyssey</h4>
+                    <span class="price">$1,499 / person</span>
+                    <p>7 Days trekking across lush rainforests, visiting pristine waterfalls, and exploring wild canopies.</p>
+                    <button class="package-book" data-destination="Cascading Falls">Book Now</button>
+                </div>
+                <div class="package-card">
+                    <h4>Sahara Wanderer</h4>
+                    <span class="price">$1,899 / person</span>
+                    <p>6 Days desert caravan, sleeping under the stars, camel riding, and local culture immersion.</p>
+                    <button class="package-book" data-destination="Sahara Dunes">Book Now</button>
+                </div>
+                <div class="package-card">
+                    <h4>Summit Expedition</h4>
+                    <span class="price">$2,999 / person</span>
+                    <p>10 Days guided alpine trek for climbing enthusiasts up to scenic glacier peaks.</p>
+                    <button class="package-book" data-destination="Everest Summit">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section Panel -->
+    <div class="content-panel" id="contact-panel">
+        <div class="panel-content glass-panel">
+            <button class="panel-close" id="btn-close-contact">&times;</button>
+            <h2>Contact Us</h2>
+            <p>Ready to plan your next escape? Contact our main office:</p>
+            <div class="contact-details">
+                <p><i class="fa-solid fa-location-dot"></i> 101, Travel Plaza, Main Market, Mumbai, India</p>
+                <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fa-solid fa-envelope"></i> contact@vidhyashreetravels.com</p>
+            </div>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main JS Script -->
+    <script src="script.js"></script>
+</body>
+</html>
