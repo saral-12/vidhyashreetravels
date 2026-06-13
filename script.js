@@ -22,100 +22,60 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // -------------------------------------------------------------
-    // Homepage Slider & Carousel System
+    // Homepage Auto-Playing Photo Slideshow System
     // -------------------------------------------------------------
     const bgSlides = document.querySelectorAll('.bg-slides .bg-slide');
-    const textSlides = document.querySelectorAll('.text-slide-item');
-    const carouselCards = document.querySelectorAll('.carousel-card');
-    const cardsTrack = document.querySelector('.cards-track');
-    const prevBtn = document.getElementById('btn-prev-slide');
-    const nextBtn = document.getElementById('btn-next-slide');
-    const progressFill = document.getElementById('progress-fill');
-    const currentSlideNum = document.getElementById('current-slide-num');
+    const indicatorDots = document.querySelectorAll('#slideshow-dots .indicator-dot');
 
-    if (carouselCards.length > 0) {
+    if (bgSlides.length > 0) {
         let currentSlide = 0;
-        const totalSlides = carouselCards.length;
+        const totalSlides = bgSlides.length;
+        let slideTimer;
 
-        function updateSlider(index) {
-            if (index < 0) {
-                currentSlide = totalSlides - 1;
-            } else if (index >= totalSlides) {
-                currentSlide = 0;
-            } else {
-                currentSlide = index;
+        function showSlide(index) {
+            // Remove active class from current slide and dot
+            bgSlides[currentSlide].classList.remove('active');
+            if (indicatorDots.length > 0 && indicatorDots[currentSlide]) {
+                indicatorDots[currentSlide].classList.remove('active');
             }
 
-            // 1. Update Background Slides
-            bgSlides.forEach((slide, i) => {
-                if (i === currentSlide) {
-                    slide.classList.add('active');
-                } else {
-                    slide.classList.remove('active');
-                }
-            });
+            // Set new active slide index
+            currentSlide = index;
 
-            // 2. Update Text Content
-            textSlides.forEach((slide, i) => {
-                if (i === currentSlide) {
-                    slide.classList.add('active');
-                } else {
-                    slide.classList.remove('active');
-                }
-            });
-
-            // 3. Update Cards Focus
-            carouselCards.forEach((card, i) => {
-                if (i === currentSlide) {
-                    card.classList.add('active');
-                } else {
-                    card.classList.remove('active');
-                }
-            });
-
-            // 4. Slide/Translate the Cards Track (shifts inactive cards off-screen)
-            if (cardsTrack) {
-                const isMobile = window.innerWidth <= 768;
-                // Step = Card Width + Gap. Inactive card = 160px. Gap = 20px (1.25rem). Step = 180px.
-                // Mobile: card = 110px. Gap = 20px. Step = 130px.
-                const stepWidth = isMobile ? 130 : 180;
-                const translation = -(currentSlide * stepWidth);
-                cardsTrack.style.transform = `translateX(${translation}px)`;
-            }
-
-            // 5. Update Progress Bar
-            if (progressFill) {
-                const progressPercentage = ((currentSlide + 1) / totalSlides) * 100;
-                progressFill.style.width = `${progressPercentage}%`;
-            }
-
-            // 5. Update Slide Count
-            if (currentSlideNum) {
-                currentSlideNum.textContent = `0${currentSlide + 1}`;
+            // Add active class to new slide and dot
+            bgSlides[currentSlide].classList.add('active');
+            if (indicatorDots.length > 0 && indicatorDots[currentSlide]) {
+                indicatorDots[currentSlide].classList.add('active');
             }
         }
 
-        if (prevBtn) {
-            prevBtn.addEventListener('click', () => {
-                updateSlider(currentSlide - 1);
-            });
+        function nextSlide() {
+            const nextIndex = (currentSlide + 1) % totalSlides;
+            showSlide(nextIndex);
         }
 
-        if (nextBtn) {
-            nextBtn.addEventListener('click', () => {
-                updateSlider(currentSlide + 1);
-            });
+        function startTimer() {
+            slideTimer = setInterval(nextSlide, 5000); // Transitions every 5 seconds
         }
 
-        carouselCards.forEach((card) => {
-            card.addEventListener('click', () => {
-                const index = parseInt(card.getAttribute('data-slide-index'), 10);
-                updateSlider(index);
+        function resetTimer() {
+            clearInterval(slideTimer);
+            startTimer();
+        }
+
+        // Add manual navigation click listeners to indicator dots
+        indicatorDots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const index = parseInt(dot.getAttribute('data-slide-index'), 10);
+                if (!isNaN(index) && index >= 0 && index < totalSlides) {
+                    showSlide(index);
+                    resetTimer();
+                }
             });
         });
 
-        // Sync initial view
-        updateSlider(0);
+        // Initialize slideshow
+        startTimer();
     }
 
 
@@ -178,15 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (startAdventureBtn) {
         startAdventureBtn.addEventListener('click', () => {
-            let activeDest = null;
-            const activeTextSlide = document.querySelector('.text-slide-item.active');
-            if (activeTextSlide) {
-                const subtitleElem = activeTextSlide.querySelector('.subtitle');
-                if (subtitleElem) {
-                    activeDest = subtitleElem.textContent.replace('Embark On The Journey Of A Lifetime', '').trim();
-                }
-            }
-            openBookingModal(activeDest);
+            openBookingModal(null);
         });
     }
 
@@ -297,16 +249,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Home Page Save Badge Alert
-    const saveAdventureBtn = document.getElementById('btn-save-adventure');
-    if (saveAdventureBtn) {
-        saveAdventureBtn.addEventListener('click', () => {
-            const activeTextSlide = document.querySelector('.text-slide-item.active');
-            if (activeTextSlide) {
-                const titleElem = activeTextSlide.querySelector('.main-title');
-                const currentTitle = titleElem ? titleElem.textContent.replace('\n', ' ').trim() : 'Destination';
-                alert(`"${currentTitle}" has been saved to your Bookmarks list!`);
-            }
-        });
-    }
+    // Home Page Save Badge Alert removed (CTA buttons simplified)
 });
