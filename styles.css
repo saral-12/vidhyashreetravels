@@ -146,6 +146,22 @@ ul {
     letter-spacing: 2px;
 }
 
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-img {
+    height: 48px;
+    width: 48px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 1.5px solid var(--color-primary);
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.25);
+    background-color: #ffffff;
+}
+
 .logo-bold {
     color: var(--color-text-white);
 }
