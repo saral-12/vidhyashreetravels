@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Travel Packages | Vidhyashree Travels</title>
+    <title>Tour Packages | Vidhyashree Travels</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,6 +24,7 @@
     <header class="site-header">
         <div class="logo">
             <a href="index.html" id="header-logo">
+                <img src="assets/logo.png" alt="Vidhyashree Travels Logo" class="logo-img">
                 <span class="logo-bold">VIDHYASHREE</span>
                 <span class="logo-light">TRAVELS</span>
             </a>
@@ -34,6 +35,7 @@
                 <li><a href="packages.html" class="nav-link active">Packages</a></li>
                 <li><a href="about.html" class="nav-link">About Us</a></li>
                 <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
                 <li><a href="contact.html" class="nav-link">Contact Us</a></li>
             </ul>
         </nav>
@@ -50,87 +52,128 @@
     <main class="page-main-content">
         <div class="page-header-container">
             <span class="page-subtitle"><span class="sub-line"></span> Curated Expeditions</span>
-            <h1 class="page-main-title">TRAVEL PACKAGES</h1>
-            <p class="page-description">Explore our hand-picked experiences designed for true adventurers. Select a package and begin your journey today.</p>
+            <h1 class="page-main-title">OUR TOUR PACKAGES</h1>
+            <p class="page-description">Handpicked packages with pure vegetarian group meals, comfortable hotel arrangements, and experienced tour coordinators.</p>
         </div>
 
         <!-- Filters Section -->
         <div class="catalog-filters">
             <button class="filter-btn active" data-filter="all">All Packages</button>
-            <button class="filter-btn" data-filter="forest">Forest</button>
-            <button class="filter-btn" data-filter="desert">Desert</button>
-            <button class="filter-btn" data-filter="mountain">Mountain</button>
-            <button class="filter-btn" data-filter="ocean">Ocean</button>
+            <button class="filter-btn" data-filter="domestic">Domestic Tours</button>
+            <button class="filter-btn" data-filter="international">International Tours</button>
+            <button class="filter-btn" data-filter="devotional">Devotional Yatras</button>
         </div>
 
         <!-- Packages Showcase Grid -->
         <div class="packages-showcase-grid">
             <!-- Package 1 -->
-            <div class="package-showcase-card glass-panel" data-category="forest">
-                <div class="pkg-img-wrapper" style="background-image: url('assets/hero-bg.png');"></div>
+            <div class="package-showcase-card glass-panel" data-category="domestic devotional">
+                <div class="pkg-img-wrapper" style="background-image: url('assets/mountain.png');"></div>
                 <div class="pkg-content">
-                    <span class="pkg-tag">Forest Trek</span>
-                    <h3>Cascading Falls Odyssey</h3>
-                    <p class="pkg-desc">7 Days trekking through hidden rainforest pathways, experiencing local eco-lodges, and bathing in majestic, pristine waterfalls.</p>
+                    <span class="pkg-tag">Char Dham / Devotional</span>
+                    <h3>Char Dham Yatra</h3>
+                    <p class="pkg-desc">12 Days pilgrimage. Holy journey of Yamunotri, Gangotri, Kedarnath, and Badrinath. Comfortable hotel stays and fresh pure vegetarian group dining.</p>
                     <div class="pkg-footer">
-                        <span class="pkg-price">$1,499<small>/person</small></span>
-                        <button class="book-now-trigger" data-destination="Cascading Falls">Book Now</button>
+                        <span class="pkg-price">₹95,000<small>/person</small></span>
+                        <button class="book-now-trigger" data-destination="Char Dham Yatra">Book Now</button>
                     </div>
                 </div>
             </div>
 
             <!-- Package 2 -->
-            <div class="package-showcase-card glass-panel" data-category="forest">
+            <div class="package-showcase-card glass-panel" data-category="domestic">
                 <div class="pkg-img-wrapper" style="background-image: url('assets/monkey.png');"></div>
                 <div class="pkg-content">
-                    <span class="pkg-tag">Wildlife</span>
-                    <h3>Wild Canopy & Jungle Safaris</h3>
-                    <p class="pkg-desc">5 Days of deep-canopy expeditions. Face exotic primates, track nocturnal forest animals, and learn jungle survival skills.</p>
+                    <span class="pkg-tag">Scenic India</span>
+                    <h3>Kashmir Valley Tour</h3>
+                    <p class="pkg-desc">7 Days exploring Srinagar, Gulmarg, Sonamarg, and Pahalgam. Shikara rides on Dal Lake, local sightseeing guides, and premium hotel rooms.</p>
                     <div class="pkg-footer">
-                        <span class="pkg-price">$1,250<small>/person</small></span>
-                        <button class="book-now-trigger" data-destination="Wild Canopy">Book Now</button>
+                        <span class="pkg-price">₹45,000<small>/person</small></span>
+                        <button class="book-now-trigger" data-destination="Kashmir Tour">Book Now</button>
                     </div>
                 </div>
             </div>
 
             <!-- Package 3 -->
-            <div class="package-showcase-card glass-panel" data-category="desert">
-                <div class="pkg-img-wrapper" style="background-image: url('assets/desert.png');"></div>
+            <div class="package-showcase-card glass-panel" data-category="international">
+                <div class="pkg-img-wrapper" style="background-image: url('assets/hero-bg.png');"></div>
                 <div class="pkg-content">
-                    <span class="pkg-tag">Desert Caravan</span>
-                    <h3>Sahara Sunset Wanderer</h3>
-                    <p class="pkg-desc">6 Days desert trek. Caravan across high golden sand dunes, experience traditional berber hospitality, and sleep under infinite stars.</p>
+                    <span class="pkg-tag">Scenic Kingdom</span>
+                    <h3>Bhutan Scenic Tour</h3>
+                    <p class="pkg-desc">6 Days in Thimphu and Paro. Hike up to the cliffside Tiger's Nest Monastery, enjoy tranquil valleys, and tour historic Dzongs with full visa support.</p>
                     <div class="pkg-footer">
-                        <span class="pkg-price">$1,899<small>/person</small></span>
-                        <button class="book-now-trigger" data-destination="Sahara Dunes">Book Now</button>
+                        <span class="pkg-price">₹65,000<small>/person</small></span>
+                        <button class="book-now-trigger" data-destination="Bhutan Tour">Book Now</button>
                     </div>
                 </div>
             </div>
 
             <!-- Package 4 -->
-            <div class="package-showcase-card glass-panel" data-category="mountain">
-                <div class="pkg-img-wrapper" style="background-image: url('assets/mountain.png');"></div>
+            <div class="package-showcase-card glass-panel" data-category="international">
+                <div class="pkg-img-wrapper" style="background-image: url('assets/desert.png');"></div>
                 <div class="pkg-content">
-                    <span class="pkg-tag">Alpine Summit</span>
-                    <h3>Everest Summit Trek</h3>
-                    <p class="pkg-desc">10 Days climbing challenge. Hike up to snowy ridges, conquer steep vertical passes, and witness the sunrise above giant peaks.</p>
+                    <span class="pkg-tag">Luxury Escape</span>
+                    <h3>Dubai Skyline Tour</h3>
+                    <p class="pkg-desc">5 Days of futuristic wonder. Visit Burj Khalifa, enjoy red sand dune safaris with camel rides, and dine in top vegetarian restaurants.</p>
                     <div class="pkg-footer">
-                        <span class="pkg-price">$2,999<small>/person</small></span>
-                        <button class="book-now-trigger" data-destination="Everest Summit">Book Now</button>
+                        <span class="pkg-price">₹85,000<small>/person</small></span>
+                        <button class="book-now-trigger" data-destination="Dubai Tour">Book Now</button>
                     </div>
                 </div>
             </div>
 
             <!-- Package 5 -->
-            <div class="package-showcase-card glass-panel" data-category="ocean">
+            <div class="package-showcase-card glass-panel" data-category="domestic">
                 <div class="pkg-img-wrapper" style="background-image: url('assets/surf.png');"></div>
                 <div class="pkg-content">
-                    <span class="pkg-tag">Surf & Ocean</span>
-                    <h3>Pacific Crest Surf Expedition</h3>
-                    <p class="pkg-desc">6 Days surfing camp. Professional training for surfing giant wave crests, scuba diving reefs, and beach campfire retreats.</p>
+                    <span class="pkg-tag">Heritage India</span>
+                    <h3>Rajasthan Heritage Tour</h3>
+                    <p class="pkg-desc">7 Days visiting royal forts and palaces of Jaipur, Udaipur, and desert dunes in Jaisalmer. Experience cultural shows and traditional hospitality.</p>
                     <div class="pkg-footer">
-                        <span class="pkg-price">$1,650<small>/person</small></span>
-                        <button class="book-now-trigger" data-destination="Pacific Crest">Book Now</button>
+                        <span class="pkg-price">₹35,000<small>/person</small></span>
+                        <button class="book-now-trigger" data-destination="Rajasthan Tour">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package 6 -->
+            <div class="package-showcase-card glass-panel" data-category="international devotional">
+                <div class="pkg-img-wrapper" style="background-image: url('assets/mountain.png');"></div>
+                <div class="pkg-content">
+                    <span class="pkg-tag">Spiritual / International</span>
+                    <h3>Nepal Spiritual Tour</h3>
+                    <p class="pkg-desc">6 Days pilgrimage of Pashupatinath Temple, Kathmandu, and Pokhara valleys. Enjoy spectacular Himalayan vistas and dedicated group guides.</p>
+                    <div class="pkg-footer">
+                        <span class="pkg-price">₹28,000<small>/person</small></span>
+                        <button class="book-now-trigger" data-destination="Nepal Tour">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package 7 -->
+            <div class="package-showcase-card glass-panel" data-category="international">
+                <div class="pkg-img-wrapper" style="background-image: url('assets/surf.png');"></div>
+                <div class="pkg-content">
+                    <span class="pkg-tag">Tropical Beach</span>
+                    <h3>Thailand Tour</h3>
+                    <p class="pkg-desc">6 Days in Bangkok and Pattaya. Speedboat rides to Coral Island, beach resorts, and city temple sightseeing tours with pure veg food arrangements.</p>
+                    <div class="pkg-footer">
+                        <span class="pkg-price">₹48,000<small>/person</small></span>
+                        <button class="book-now-trigger" data-destination="Thailand Tour">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package 8 -->
+            <div class="package-showcase-card glass-panel" data-category="international">
+                <div class="pkg-img-wrapper" style="background-image: url('assets/hero-bg.png');"></div>
+                <div class="pkg-content">
+                    <span class="pkg-tag">Modern City</span>
+                    <h3>Singapore Explorer</h3>
+                    <p class="pkg-desc">6 Days covering Sentosa Island, Universal Studios, Gardens by the Bay, and night safari. A perfect family vacation package.</p>
+                    <div class="pkg-footer">
+                        <span class="pkg-price">₹98,000<small>/person</small></span>
+                        <button class="book-now-trigger" data-destination="Singapore Tour">Book Now</button>
                     </div>
                 </div>
             </div>
@@ -157,18 +200,21 @@
                     </div>
                     <div class="form-group">
                         <label for="user-phone">Phone Number</label>
-                        <input type="tel" id="user-phone" required placeholder="+1 (555) 000-0000">
+                        <input type="tel" id="user-phone" required placeholder="+91 99999 99999">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label for="trip-destination">Select Destination</label>
                         <select id="trip-destination" required>
-                            <option value="Cascading Falls">Cascading Falls Odyssey</option>
-                            <option value="Wild Canopy">Wild Canopy & Jungle Safaris</option>
-                            <option value="Sahara Dunes">Sahara Sunset Wanderer</option>
-                            <option value="Everest Summit">Everest Summit Trek</option>
-                            <option value="Pacific Crest">Pacific Crest Surf Expedition</option>
+                            <option value="Char Dham Yatra">Char Dham Yatra</option>
+                            <option value="Kashmir Tour">Kashmir Valley Tour</option>
+                            <option value="Bhutan Tour">Bhutan Scenic Tour</option>
+                            <option value="Dubai Tour">Dubai Skyline Tour</option>
+                            <option value="Rajasthan Tour">Rajasthan Heritage Tour</option>
+                            <option value="Nepal Tour">Nepal Spiritual Tour</option>
+                            <option value="Thailand Tour">Thailand Tour</option>
+                            <option value="Singapore Tour">Singapore Explorer</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -178,7 +224,7 @@
                 </div>
                 <div class="form-group">
                     <label for="user-message">Special Requirements / Notes</label>
-                    <textarea id="user-message" rows="4" placeholder="Let us know what kind of experience you are looking for..."></textarea>
+                    <textarea id="user-message" rows="4" placeholder="Mention preferred pickup points, group size or dietary requests..."></textarea>
                 </div>
                 <button type="submit" class="submit-btn" id="btn-submit-inquiry">Send Inquiry</button>
             </form>
