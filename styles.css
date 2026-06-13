@@ -395,6 +395,8 @@ ul {
     gap: 2.5rem;
     height: 100%;
     justify-content: flex-end;
+    overflow: hidden;
+    width: 100%;
 }
 
 .cards-track {
@@ -403,6 +405,8 @@ ul {
     height: 380px;
     align-items: flex-end;
     overflow: visible;
+    transition: transform var(--transition-slow);
+    will-change: transform;
 }
 
 .carousel-card {
