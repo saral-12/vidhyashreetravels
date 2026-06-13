@@ -101,7 +101,7 @@ ul {
 }
 
 .bg-slide.active {
-    opacity: 0.35; /* Dark, moody overlay image opacity */
+    opacity: 0.55; /* Higher opacity to showcase the photo slideshow */
     transform: scale(1.0);
     z-index: -1;
 }
@@ -1605,5 +1605,155 @@ textarea {
     to {
         transform: scale(1);
         opacity: 1;
+    }
+}
+
+/* Centered Hero welcome panel and dots indicator */
+.hero-container.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: calc(var(--header-height) + 2rem) var(--side-padding) 4rem var(--side-padding);
+}
+
+.hero-content-centered {
+    max-width: 800px;
+    padding: 3.5rem 4rem;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(25px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.hero-content-centered .subtitle {
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content-centered .main-title {
+    font-size: 3.8rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #ffffff 40%, var(--color-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content-centered .description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 650px;
+    margin-bottom: 2.5rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-content-centered .cta-actions {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 0;
+}
+
+/* Secondary CTA Button (Glass Style) */
+.secondary-cta-btn {
+    height: 56px;
+    padding: 0 2.5rem;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    transition: all var(--transition-fast);
+    backdrop-filter: blur(10px);
+    color: var(--color-text-white);
+    cursor: pointer;
+}
+
+.secondary-cta-btn:hover {
+    border-color: var(--color-primary);
+    background: rgba(255, 193, 7, 0.1);
+    color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+/* Slideshow Indicators (Dots) */
+.slideshow-indicators {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.8rem;
+    z-index: 10;
+}
+
+.indicator-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator-dot:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.indicator-dot.active {
+    width: 28px;
+    border-radius: 5px;
+    background: var(--color-primary);
+    box-shadow: 0 0 10px var(--color-primary);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Sub-page Responsive Media Queries for Centered Layout */
+@media (max-width: 768px) {
+    .hero-content-centered {
+        padding: 2.5rem 2rem;
+        margin: 0 1rem;
+    }
+    .hero-content-centered .main-title {
+        font-size: 2.6rem;
+    }
+    .hero-content-centered .description {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+    }
+    .hero-content-centered .cta-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+    .hero-content-centered .cta-actions a,
+    .hero-content-centered .cta-actions button {
+        width: 100%;
+        justify-content: center;
     }
 }
