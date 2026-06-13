@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const bgSlides = document.querySelectorAll('.bg-slides .bg-slide');
     const textSlides = document.querySelectorAll('.text-slide-item');
     const carouselCards = document.querySelectorAll('.carousel-card');
+    const cardsTrack = document.querySelector('.cards-track');
     const prevBtn = document.getElementById('btn-prev-slide');
     const nextBtn = document.getElementById('btn-next-slide');
     const progressFill = document.getElementById('progress-fill');
@@ -72,7 +73,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // 4. Update Progress Bar
+            // 4. Slide/Translate the Cards Track (shifts inactive cards off-screen)
+            if (cardsTrack) {
+                const isMobile = window.innerWidth <= 768;
+                // Step = Card Width + Gap. Inactive card = 160px. Gap = 20px (1.25rem). Step = 180px.
+                // Mobile: card = 110px. Gap = 20px. Step = 130px.
+                const stepWidth = isMobile ? 130 : 180;
+                const translation = -(currentSlide * stepWidth);
+                cardsTrack.style.transform = `translateX(${translation}px)`;
+            }
+
+            // 5. Update Progress Bar
             if (progressFill) {
                 const progressPercentage = ((currentSlide + 1) / totalSlides) * 100;
                 progressFill.style.width = `${progressPercentage}%`;
